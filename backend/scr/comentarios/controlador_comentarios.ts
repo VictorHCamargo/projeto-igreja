@@ -1,7 +1,7 @@
 import { Response,Request } from "express"
 import { servico_buscar, servico_buscar_id, servico_delete, servico_inserir } from "./servico_comentarios"
 
-export const control_buscar = async(res:Response) => {
+export const control_buscar = async(req:Request,res:Response) => {
     const resultado_select = await servico_buscar()
     if(resultado_select.executado != false) {
         res.status(200).json(resultado_select)
@@ -11,7 +11,7 @@ export const control_buscar = async(res:Response) => {
 }
 export const control_buscar_id = async(req:Request,res:Response) => {
     const parametros = {
-        code_comentario: req.params.code_comentarios
+        code_comentario: req.params.code_comentario
     }
     const resultado_select_id = await servico_buscar_id(parametros)
     if(resultado_select_id.executado != false) {
@@ -36,7 +36,7 @@ export const control_insert = async(req:Request,res:Response) => {
 }
 export const control_delete = async(req:Request,res:Response) => {
     const parametros = {
-        code_comentario: req.params.code_comentarios
+        code_comentario: req.params.code_comentario
     }
     const resultado_delete = await servico_delete(parametros)
     if(resultado_delete.executado != false) {
