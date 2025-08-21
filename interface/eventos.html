@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../CSS/Projetos/Santo_Antonio/style.css">
+    <link rel="stylesheet" href="./utilitarios/style.css">
     <title>Cadastro de eventos</title>
 </head>
 <body>
     <div id="site">
         <header class="top">
             <div class="logo">
-                <img>
+                <img src="imgs/logo_igreja.png">
             </div>
         </header>
         <main class="middle">
-            <div class="subtop">
+            <div class="campo-botoes">
                 <button onclick="window.location.href = 'index.html'">Voltar para página principal</button>
                 <button onclick="window.location.href = 'suggestion.html'">Ir para área de comentários/Sugestões</button>
             </div>
             <div class="submiddle">
                 <div class="campo-adicionar">
                     <label for="nome_usuario">Nome</label>
-                    <input id="nome_usuario" type="text" placeholder="Adicione o titulo de seu comentário/sugestao">
+                    <input id="nome_usuario" type="text" placeholder="Adicione seu nome">
                 </div>
                 <div class="campo-adicionar">
                     <label for="email">EMAIL</label>
-                    <input id="email" type="email" placeholder="Adicione o titulo de seu comentário/sugestao">
+                    <input id="email" type="text" placeholder="Adicione seu email">
                 </div>
                 <div class="campo-adicionar">
                     <label for="nome_evento">Titulo</label>
@@ -45,7 +45,10 @@
                 </div>
                 <div class="campo-adicionar">
                     <label for="invest">Investimento necessário estimado</label>
-                    <input id="invest" type="number" placeholder="Adicione informações relevantes sobre como seria essa atividade">
+                    <input id="invest" type="number" placeholder="Por exemplo: 2500,25">
+                </div>
+                <div class="campo-botoes">
+                    <input type="submit">
                 </div>
             </div>
         </main>
